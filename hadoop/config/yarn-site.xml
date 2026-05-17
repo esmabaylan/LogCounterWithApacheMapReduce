@@ -1,0 +1,28 @@
+<!--
+ [TR] Yarn yapılandırma dosyasıdır. yarn.nodemanager.aux-services özelliği, Yarn'un düğüm yöneticisinin ek hizmetlerini belirtir. 
+    Bu örnekte, mapreduce_shuffle hizmeti belirtilmiştir.
+    yarn.nodemanager.aux-services.mapreduce_shuffle.class özelliği, mapreduce_shuffle hizmetinin sınıfını belirtir. 
+    Bu örnekte, org.apache.hadoop.mapred.ShuffleHandler sınıfı belirtilmiştir.
+    yarn.resourcemanager.hostname özelliği, Yarn'un kaynak yöneticisinin ana bilgisayar adını belirtir. Bu örnekte, localhost olarak belirtilmiştir.
+
+ [EN] This is the Yarn configuration file. The yarn.nodemanager.aux-services property specifies the auxiliary services for the Yarn node manager.
+    In this example, the mapreduce_shuffle service is specified.
+    The yarn.nodemanager.aux-services.mapreduce_shuffle.class property specifies the class for the mapreduce_shuffle service. 
+    In this example, the org.apache.hadoop.mapred.ShuffleHandler class is specified.
+    The yarn.resourcemanager.hostname property specifies the hostname of the Yarn resource manager. In this example, it is specified as localhost.
+ -->
+ 
+<configuration>
+    <property>
+        <name>yarn.nodemanager.aux-services</name>
+        <value>mapreduce_shuffle</value>
+    </property>
+    <property>
+        <name>yarn.nodemanager.aux-services.mapreduce_shuffle.class</name>
+        <value>org.apache.hadoop.mapred.ShuffleHandler</value>
+    </property>
+    <property>
+        <name>yarn.resourcemanager.hostname</name>
+        <value>localhost</value>
+    </property>
+</configuration>

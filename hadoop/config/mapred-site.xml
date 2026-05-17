@@ -1,0 +1,15 @@
+<!--
+ [TR] MapReduce yapılandırma dosyasıdır. MapReduce'un YARN üzerinde çalışacağını belirtir.
+        mapreduce.framework.name özelliği, MapReduce framework'unun hangi sistem üzerinde çalıştırılacağını belirtir.
+        Bu örnekte, Yarn üzerinde çalıştırılacağı belirtilmiştir.
+  [EN] This is the MapReduce configuration file. It specifies that MapReduce will run on YARN.
+        The mapreduce.framework.name property specifies which system the MapReduce framework should run on.
+        In this example, it is specified that the framework will run on YARN.
+ -->
+
+<configuration>
+    <property>
+        <name>mapreduce.framework.name</name>
+        <value>yarn</value>
+    </property>
+</configuration>

@@ -1,0 +1,10 @@
+services:
+  custom-hadoop:
+    build: .
+    container_name: esma-hadoop-cluster
+    ports:
+      - "9870:9870"  # Hadoop NameNode Arayüzü
+      - "8088:8088"  # YARN Arayüzü
+    volumes:
+      - ./workspace:/root/workspace
+      - ./mapred_local_temp:/tmp/hadoop

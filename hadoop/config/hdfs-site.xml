@@ -1,0 +1,26 @@
+ <!--
+  [TR] HDFS'nin yapılandırma dosyasıdır. HDFS'nin veri bloklarının çoğaltılma sayısını, ad düğümünün ve veri düğümünün depolama dizinlerini belirtir.
+     dfs.replication özelliği, HDFS'deki veri bloklarının kaç kopyasının saklanacağını belirler.her veri bloğu için 1 kopya saklanacağı belirtilmiştir.
+     dfs.namenode.name.dir özelliği, HDFS'nin ad düğümünün metadata bilgilerini saklayacağı dizini belirtir. Bu örnekte, ad düğümünün metadata bilgileri file:///hadoop/dfs/name dizininde saklanacaktır.
+     dfs.datanode.data.dir özelliği, HDFS'nin veri düğümlerinin veri bloklarını saklayacağı dizini belirtir. Bu örnekte, veri düğümlerinin veri blokları file:///hadoop/dfs/data dizininde saklanacaktır.
+   
+   [EN] This is the configuration file for HDFS. It specifies the replication factor for data blocks in HDFS, as well as the storage directories for the name node and data nodes.
+     The dfs.replication property determines how many copies of each data block will be stored in HDFS. In this example, it is set to 1, meaning that two copies of each data block will be stored.
+     The dfs.namenode.name.dir property specifies the directory where the name node will store its metadata information. In this example, the name node's metadata information will be stored in the file:///hadoop/dfs/name directory.
+     The dfs.datanode.data.dir property specifies the directory where the data nodes will store their data blocks. In this example, the data nodes will store their data blocks in the file:///hadoop/dfs/data directory.
+ -->
+ 
+ <configuration>
+     <property>
+         <name>dfs.replication</name>
+         <value>1</value>
+     </property>
+     <property>
+         <name>dfs.namenode.name.dir</name>
+         <value>file:///hadoop/dfs/name</value>
+     </property>
+     <property>
+         <name>dfs.datanode.data.dir</name>
+         <value>file:///hadoop/dfs/data</value>
+     </property>
+</configuration>

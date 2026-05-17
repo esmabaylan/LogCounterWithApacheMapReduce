@@ -1,0 +1,20 @@
+ <!--
+ [TR] Hadoopun temel yapılandırma dosyasıdır. HDFS'nin ana düğümünün adresini belirtir. 
+    localhost adlı düğümün 9000 portu üzerinden erişilebileceği belirtilmiştir.
+    tmp klasörünün hadoop tarafından geçici dosyaların saklanması için kullanılacağı belirtilmiştir.
+    
+ [EN] This is the core configuration file for Hadoop. It specifies the address of the HDFS master node. 
+    It indicates that the node named localhost can be accessed through port 9000.
+    It also specifies that the tmp directory will be used by Hadoop for storing temporary files.
+ -->
+
+<configuration>
+    <property>
+        <name>fs.defaultFS</name>
+        <value>hdfs://localhost:9000/</value>
+    </property>
+    <property>
+        <name>hadoop.tmp.dir</name>
+        <value>/tmp/hadoop</value>
+    </property>
+</configuration>
