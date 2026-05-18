@@ -1,0 +1,3 @@
+com\loganalyzer\LogDriver.class
+com\loganalyzer\LogMapper.class
+com\loganalyzer\LogReducer.class
